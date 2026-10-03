@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KAAMSETU - Problem Se Solution Tak</title><meta name="description" content="KAAMSETU: find a professional, request a service and track your repair.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3C/svg%3E">
+<style>:root{--p:#4f46e5;--p2:#0ea5e9;--ink:#0f172a;--mu:#64748b;--bg:#f8fafc;--card:#fff;--br:#e2e8f0;--ok:#16a34a;--er:#dc2626;--sh:0 8px 30px rgba(15,23,42,.07);--r:16px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}.c{max-width:1140px;margin:auto;padding:0 20px}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.02em}h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.01em}
+.sec{padding:64px 0}.sec h2{margin-bottom:8px}.lead{color:var(--mu);margin-bottom:28px;max-width:620px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:12px;border:1px solid var(--br);background:#fff;font:600 .95rem inherit;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}.btn.pr{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:0}
+.btn.sm{padding:7px 13px;font-size:.85rem}.btn.er{color:var(--er)}.btn:disabled{opacity:.5;cursor:not-allowed}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--br)}
+.nav .c{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:.04em;background:linear-gradient(135deg,var(--p),var(--p2));-webkit-background-clip:text;color:transparent}
+.links{display:flex;gap:6px}.links a{padding:8px 14px;border-radius:10px;color:var(--mu);font-weight:500}.links a:hover,.links a.on{color:var(--p);background:#eef2ff}
+.rt{display:flex;align-items:center;gap:10px}
+.burger{width:44px;height:44px;border:1px solid var(--br);border-radius:12px;background:#fff;cursor:pointer;display:grid;place-content:center;gap:5px}
+.burger i{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
+.ov{position:fixed;inset:0;background:rgba(15,23,42,.55);opacity:0;visibility:hidden;transition:.3s;z-index:90}.ov.open{opacity:1;visibility:visible}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(330px,86vw);background:#fff;z-index:100;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);padding:18px;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.2)}
+.dr.open{transform:none}.dr .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.dr .x{width:40px;height:40px;border-radius:10px;border:1px solid var(--br);background:#fff;font-size:1.2rem;cursor:pointer}
+.dr nav{display:flex;flex-direction:column;gap:4px;overflow:auto}.dr nav a{padding:13px 14px;border-radius:12px;font-weight:600}.dr nav a:hover,.dr nav a.on{background:#eef2ff;color:var(--p)}
+.dr small{margin-top:auto;color:var(--mu)}
+@media(max-width:900px){.links,.hide-m{display:none}}@media(min-width:901px){.burger{display:none}}
+.hero{padding:70px 0;background:radial-gradient(900px 400px at 85% -10%,#e0e7ff,transparent),radial-gradient(600px 300px at 0 100%,#e0f2fe,transparent)}
+.hero .c{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}@media(max-width:900px){.hero .c{grid-template-columns:1fr}}
+.hero p{color:var(--mu);font-size:1.1rem;margin:16px 0 26px}.row{display:flex;gap:12px;flex-wrap:wrap}
+.card{background:var(--card);border:1px solid var(--br);border-radius:var(--r);padding:22px;box-shadow:var(--sh);transition:.25s}
+.card.hv:hover{transform:translateY(-4px);border-color:#c7d2fe}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.ic{width:48px;height:48px;border-radius:14px;background:#eef2ff;display:grid;place-items:center;font-size:1.5rem;margin-bottom:12px}
+.tag{display:inline-block;padding:3px 10px;border-radius:99px;background:#f1f5f9;font-size:.78rem;color:var(--mu);margin:2px 4px 2px 0}
+.tag.ok{background:#dcfce7;color:var(--ok)}.tag.pu{background:#eef2ff;color:var(--p)}.mu{color:var(--mu);font-size:.9rem}
+.ph{background:linear-gradient(135deg,#eef2ff,#f0f9ff);padding:40px 0;border-bottom:1px solid var(--br)}.ph h1{font-size:clamp(1.8rem,4vw,2.5rem)}.ph p{color:var(--mu);margin-top:6px}
+.bc{font-size:.85rem;color:var(--mu);margin-bottom:10px}.bc a{color:var(--p)}
+label{display:block;font-weight:600;font-size:.88rem;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--br);border-radius:12px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid #c7d2fe;border-color:var(--p)}.err{color:var(--er);font-size:.82rem;margin-top:4px}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.opt{padding:14px;border:2px solid var(--br);border-radius:14px;cursor:pointer;font-weight:600;background:#fff;text-align:left;font-family:inherit}.opt:hover{border-color:#a5b4fc}.opt.sel{border-color:var(--p);background:#eef2ff}
+.bar{height:6px;background:var(--br);border-radius:9px;margin:10px 0 22px;overflow:hidden}.bar b{display:block;height:100%;background:linear-gradient(90deg,var(--p),var(--p2));transition:.4s}
+.trk{display:flex;gap:6px;margin:14px 0}.trk div{flex:1;text-align:center;font-size:.76rem;color:var(--mu)}.trk div:before{content:"";display:block;height:6px;border-radius:9px;background:var(--br);margin-bottom:6px}.trk .d{color:var(--p);font-weight:700}.trk .d:before{background:linear-gradient(90deg,var(--p),var(--p2))}
+.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;display:grid;place-items:center;font-weight:700}
+.tabs{display:inline-flex;background:#e2e8f0;border-radius:12px;padding:4px;margin-bottom:22px}.tabs button{border:0;background:none;padding:9px 18px;border-radius:9px;font:600 .9rem inherit;cursor:pointer}.tabs .on{background:#fff;box-shadow:var(--sh)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:22px}.stats b{font-size:1.6rem;display:block}
+.acc{border:1px solid var(--br);border-radius:14px;background:#fff;margin-bottom:10px;overflow:hidden}.acc button{width:100%;text-align:left;padding:16px 18px;border:0;background:none;font:600 1rem inherit;cursor:pointer;display:flex;justify-content:space-between}
+.acc div{max-height:0;overflow:hidden;transition:.3s;padding:0 18px;color:var(--mu)}.acc.open div{max-height:200px;padding:0 18px 16px}.acc.open span{transform:rotate(45deg)}
+.empty{text-align:center;padding:40px;color:var(--mu);border:2px dashed var(--br);border-radius:var(--r)}
+.spin{width:30px;height:30px;border:3px solid var(--br);border-top-color:var(--p);border-radius:50%;animation:s .7s linear infinite;margin:30px auto}@keyframes s{to{transform:rotate(360deg)}}
+.ts{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:200}.t{background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;animation:f .3s}.t.ok{background:var(--ok)}.t.er{background:var(--er)}@keyframes f{from{opacity:0;transform:translateY(10px)}}
+.filters{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:10px;margin-bottom:22px}@media(max-width:900px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}}
+.cta{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-radius:24px;padding:48px 24px;text-align:center}.cta p{opacity:.9;margin:8px 0 20px}.cta .btn{border:0}
+footer{background:var(--ink);color:#94a3b8;padding:36px 0;margin-top:40px}footer .c{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}footer a:hover{color:#fff}
+.demo{background:#fef9c3;color:#854d0e;font-size:.82rem;padding:8px 14px;border-radius:10px;margin-bottom:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.prev{max-width:240px;border-radius:12px;margin-top:10px}.ok-box{text-align:center}.ok-box .big{font-size:3rem}
+:root{padding-top:env(safe-area-inset-top,0px)}body{background:var(--bg)}</style></head>
+<body><main id="main"></main><script>/* KAAMSETU - shared app logic. Prototype: all data is demo/mock, stored in localStorage. */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const LS={get:(k,d)=>{try{return JSON.parse(localStorage.getItem('ks_'+k))??d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem('ks_'+k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const NAV=[['Home','index.html'],['Services','services.html'],['Book a Service','booking.html'],['Professionals','professionals.html'],['How It Works','how-it-works.html'],['For Workers','workers.html'],['Dashboard','dashboard.html'],['FAQ & Help','faq.html'],['Login / Sign Up','login.html']];
+const TOP=[0,1,3,5,7];
+const SV=[
+{id:'plumbing',n:'Plumbing',i:'🔧',d:'Leaks, blockages and fittings fixed by trained plumbers.',p:['Tap leakage','Pipe leakage','Blocked drain','Sink problem','Water fitting'],from:299,eta:'45-60 min'},
+{id:'electrical',n:'Electrical',i:'⚡',d:'Safe repairs for fans, switches, lights and wiring.',p:['Fan problem','Switch/socket','Light issue','Wiring problem','Power issue'],from:249,eta:'30-60 min'},
+{id:'ac',n:'AC & Cooling',i:'❄️',d:'AC servicing, gas refill and cooling repairs.',p:['Not cooling','AC service','Water leakage','Strange noise','Gas refill'],from:499,eta:'60-90 min'},
+{id:'lock',n:'Door & Lock',i:'🔑',d:'Lock repair, key duplication and door fixes.',p:['Lock stuck','Key lost','Door alignment','Handle repair','New lock fitting'],from:199,eta:'30-45 min'},
+{id:'furniture',n:'Furniture',i:'🪑',d:'Carpentry, assembly and furniture repair.',p:['Bed repair','Wardrobe fix','Furniture assembly','Table repair','Polish'],from:349,eta:'Same day'},
+{id:'cleaning',n:'Cleaning',i:'🧹',d:'Home, kitchen and bathroom deep cleaning.',p:['Home cleaning','Kitchen cleaning','Bathroom cleaning','Sofa cleaning','Water tank'],from:399,eta:'2-3 hours'}];
+const PR=[['Rahul Verma','plumbing',4.8,1.2,15,6,412,'Now'],['Aman Khan','electrical',4.9,2.1,20,8,538,'Now'],['Suresh Yadav','ac',4.6,3.4,35,5,264,'Today'],['Imran Ali','lock',4.7,0.9,12,7,351,'Now'],['Deepak Sharma','furniture',4.5,4.8,45,9,198,'Tomorrow'],['Pooja Devi','cleaning',4.9,2.6,25,4,305,'Today'],['Vikram Singh','plumbing',4.4,5.5,50,3,121,'Now'],['Neha Gupta','electrical',4.7,3.0,28,6,247,'Tomorrow']]
+.map((a,i)=>({id:i,n:a[0],s:a[1],r:a[2],km:a[3],eta:a[4],exp:a[5],jobs:a[6],av:a[7],price:SV.find(x=>x.id==a[1]).from+(i%3)*50}));
+const ST=['Requested','Confirmed','On The Way','Completed'];
+const FAQ=[['How does KaamSetu work?','Describe your problem, pick a professional, request the service and track it until completion.'],['How are professionals matched?','Matching uses service category, availability, distance and rating. In this prototype matches use demo data.'],['Are professionals verified?','Live KaamSetu will verify ID and skills before onboarding. Profiles here are mock data.'],['How is the estimated price calculated?','Starting price of the service plus an urgency multiplier. Final price is confirmed after inspection.'],['Can I cancel a request?','Yes. Open the Dashboard and cancel any request that is not yet completed.'],['How does emergency mode work?','Emergency requests are prioritised to the nearest available professional, with a higher estimate.'],['Can workers join KaamSetu?','Yes. Visit the For Workers page and complete the registration form.'],['Is online payment available?','Not in this prototype. Payment integration is planned for a later release.']];
+const user=()=>LS.get('user',null);
+function toast(m,t=''){let b=$('.ts')||document.body.appendChild(Object.assign(document.createElement('div'),{className:'ts'}));const e=Object.assign(document.createElement('div'),{className:'t '+t,textContent:m});b.appendChild(e);setTimeout(()=>e.remove(),3000)}
+function shell(){
+ const cur=__cur,lk=(l,c)=>`<a href="${l[1]}" class="${l[1]==cur?'on':''}">${l[0]}</a>`;
+ document.body.insertAdjacentHTML('afterbegin',`<header class="nav"><div class="c"><a class="logo" href="index.html">KAAMSETU</a><nav class="links">${TOP.map(i=>lk(NAV[i])).join('')}</nav><div class="rt"><a class="btn sm hide-m" href="login.html">${user()?esc(user().name):'Login'}</a><a class="btn sm pr hide-m" href="faq.html">Get Help</a><button class="burger" id="bg" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button></div></div></header>
+<div class="ov" id="ov"></div><aside class="dr" id="dr" aria-hidden="true"><div class="top"><span class="logo">KAAMSETU</span><button class="x" id="cx" aria-label="Close menu">✕</button></div><nav>${NAV.map(lk).join('')}</nav><small>Problem Se Solution Tak.</small></aside>`);
+ document.body.insertAdjacentHTML('beforeend',`<footer><div class="c"><div><b style="color:#fff">KAAMSETU</b><br>Problem Se Solution Tak.<br><span style="font-size:.8rem">Prototype with demo data. © 2026 KAAMSETU</span></div><div>${NAV.slice(0,5).map(l=>`<a href="${l[1]}">${l[0]}</a>`).join(' · ')}</div></div></footer>`);
+ const o=(v)=>{['dr','ov'].forEach(i=>$('#'+i).classList.toggle('open',v));$('#bg').setAttribute('aria-expanded',v);$('#dr').setAttribute('aria-hidden',!v);document.body.style.overflow=v?'hidden':''};
+ $('#bg').onclick=()=>o(true);$('#cx').onclick=()=>o(false);$('#ov').onclick=()=>o(false);document.onkeydown=e=>e.key=='Escape'&&o(false);
+}
+const head=(t,s)=>`<div class="ph"><div class="c"><div class="bc"><a href="index.html">Home</a> / ${t}</div><h1>${t}</h1><p>${s}</p></div></div>`;
+const stars=r=>`★ ${r.toFixed(1)}`;
+const initials=n=>n.split(' ').map(x=>x[0]).join('');
+const trk=s=>`<div class="trk">${ST.map((x,i)=>`<div class="${i<=s?'d':''}">${x}</div>`).join('')}</div>`;
+const svcCard=s=>`<div class="card hv"><div class="ic">${s.i}</div><h3>${s.n}</h3><p class="mu">${s.d}</p><p style="margin:10px 0">${s.p.map(x=>`<span class="tag">${x}</span>`).join('')}</p><p class="mu">From ₹${s.from} · Response ${s.eta}</p><a class="btn pr sm" style="margin-top:12px" href="booking.html?s=${s.id}">Book Now</a></div>`;
+const proCard=p=>`<div class="card hv"><div class="row" style="align-items:center;flex-wrap:nowrap"><div class="av">${initials(p.n)}</div><div><b>${p.n}</b> <span class="tag ok">✔ Verified</span><br><span class="mu">${SV.find(s=>s.id==p.s).n} Professional</span></div></div><p style="margin:12px 0"><span class="tag pu">${stars(p.r)}</span><span class="tag">${p.km} km</span><span class="tag">ETA ${p.eta} min</span><span class="tag">${p.exp} yrs</span><span class="tag">${p.jobs} jobs</span></p><p class="mu">Est. ₹${p.price} · Available: ${p.av}</p><div class="row" style="margin-top:12px"><button class="btn sm" data-pf="${p.id}">View Profile</button><a class="btn pr sm" href="booking.html?s=${p.s}&p=${p.id}">Request Service</a></div></div>`;
+const faqHtml=a=>a.map(f=>`<div class="acc"><button aria-expanded="false">${f[0]}<span>＋</span></button><div>${f[1]}</div></div>`).join('');
+function accInit(){$$('.acc button').forEach(b=>b.onclick=()=>{const a=b.parentElement,o=!a.classList.contains('open');a.classList.toggle('open',o);b.setAttribute('aria-expanded',o)})}
+let __pm=0;function profileModal(){if(__pm)return;__pm=1;document.addEventListener('click',e=>{const b=e.target.closest('[data-pf]');if(!b)return;const p=PR[b.dataset.pf];toast(`${p.n}: ${p.exp} yrs experience, ${p.jobs} jobs, ${stars(p.r)} (demo profile)`)})}
+const P={};
+P.home=()=>`<section class="hero"><div class="c"><div><span class="tag pu">Problem Se Solution Tak.</span><h1 style="margin-top:14px">Something Broken? KaamSetu Has You Covered.</h1><p>Find the right professional, request a service and track your repair from one place.</p><div class="row"><a class="btn pr" href="professionals.html">Find a Professional</a><a class="btn" href="booking.html">Book a Service</a></div></div>
+<div class="card"><div class="row" style="justify-content:space-between"><b>Request KS-2041</b><span class="tag ok">Live demo</span></div><p class="mu" style="margin-top:6px">Plumbing · Tap leakage · Today</p>${trk(2)}<div class="row" style="align-items:center;flex-wrap:nowrap;margin-top:8px"><div class="av">RV</div><div><b>Rahul Verma</b><br><span class="mu">${stars(4.8)} · ETA 15 min · Est. ₹399</span></div></div></div></div></section>
+<section class="sec"><div class="c"><h2>Popular Services</h2><p class="lead">Six categories covering the most common household problems.</p><div class="grid">${SV.map(svcCard).join('')}</div></div></section>
+<section class="sec" style="background:#fff"><div class="c"><h2>How KaamSetu Works</h2><p class="lead">Four simple steps from problem to solution.</p><div class="grid">${['Tell us the problem','Find a professional','Request the service','Track & rate'].map((t,i)=>`<div class="card"><div class="ic">0${i+1}</div><h3>${t}</h3></div>`).join('')}</div><p style="margin-top:20px"><a class="btn" href="how-it-works.html">See full process</a></p></div></section>
+<section class="sec"><div class="c"><h2>Why KaamSetu</h2><div class="grid" style="margin-top:20px">${[['🛡️','Verified profiles','Identity checks planned for live launch.'],['💰','Transparent estimates','See the estimate before you confirm.'],['📍','Live tracking','Follow every request stage.'],['🚨','Emergency mode','Priority matching when it cannot wait.']].map(x=>`<div class="card"><div class="ic">${x[0]}</div><h3>${x[1]}</h3><p class="mu">${x[2]}</p></div>`).join('')}</div></div></section>
+<section class="sec" style="background:#fff"><div class="c"><h2>Trusted Professionals</h2><p class="demo">Demo professionals – prototype data only.</p><div class="grid">${PR.slice(0,3).map(proCard).join('')}</div><p style="margin-top:20px"><a class="btn" href="professionals.html">Browse all professionals</a></p></div></section>
+<section class="sec"><div class="c"><h2>Customer Experience</h2><p class="demo">Sample feedback for design preview, not real reviews.</p><div class="grid">${[['Quick and clean work, tracking was clear.','Customer A'],['Estimate matched the final bill.','Customer B'],['Emergency mode saved our evening.','Customer C']].map(t=>`<div class="card">“${t[0]}”<p class="mu" style="margin-top:8px">— ${t[1]} ★★★★★</p></div>`).join('')}</div></div></section>
+<section class="sec" style="background:#fff"><div class="c"><h2>FAQ</h2><div style="margin-top:20px;max-width:760px">${faqHtml(FAQ.slice(0,3))}</div><a class="btn" href="faq.html">More questions</a></div></section>
+<section class="sec"><div class="c"><div class="cta"><h2>Ready to fix it?</h2><p>Create a request in under two minutes.</p><a class="btn" href="booking.html">Book a Service</a></div></div></section>`;
+P.services=()=>head('Services','Browse every service, common problems, starting prices and response times.')+`<div class="c sec"><div class="grid">${SV.map(svcCard).join('')}</div></div>`;
+P.how=()=>head('How It Works','From problem to solution in five steps.')+`<div class="c sec"><div class="grid">${[['Tell Us the Problem','Pick a service, problem and add a photo.'],['Find the Right Professional','Compare ratings, distance, ETA and price.'],['Request the Service','Confirm and receive a request ID.'],['Track the Job','Requested → Confirmed → On The Way → Completed.'],['Complete & Rate','Mark complete and rate your professional.']].map((x,i)=>`<div class="card hv"><div class="ic">0${i+1}</div><h3>${x[0]}</h3><p class="mu">${x[1]}</p></div>`).join('')}</div><p style="margin-top:26px"><a class="btn pr" href="booking.html">Start a request</a></p></div>`;
+P.faq=()=>head('FAQ & Help','Answers to common questions.')+`<div class="c sec" style="max-width:800px">${faqHtml(FAQ)}<div class="card" style="margin-top:24px"><b>Still need help?</b><p class="mu">Support chat is not live in this prototype.</p><button class="btn sm" style="margin-top:10px" onclick="toast('Support is simulated in this prototype')">Contact Support</button></div></div>`;
+P.pros=()=>head('Professionals','Compare verified-style demo professionals.')+`<div class="c sec"><p class="demo">All workers are mock data for prototype purposes.</p><div class="filters"><input id="q" placeholder="Search name or service…"><select id="fs"><option value="">All services</option>${SV.map(s=>`<option value="${s.id}">${s.n}</option>`).join("")}</select><select id="fr"><option value="0">Any rating</option><option value="4.5">4.5+</option><option value="4.8">4.8+</option></select><select id="fd"><option value="99">Any distance</option><option value="2">Within 2 km</option><option value="5">Within 5 km</option></select><select id="fa"><option value="">Any availability</option><option>Now</option><option>Today</option><option>Tomorrow</option></select></div><select id="fp" style="max-width:220px;margin-bottom:18px"><option value="9999">Any price</option><option value="400">Up to ₹400</option><option value="500">Up to ₹500</option></select><div id="pl"></div></div>`;
+function pros(){profileModal();const run=()=>{const q=$('#q').value.toLowerCase(),f=PR.filter(p=>(!$('#fs').value||p.s==$('#fs').value)&&p.r>=+$('#fr').value&&p.km<=+$('#fd').value&&p.price<=+$('#fp').value&&(!$('#fa').value||p.av==$('#fa').value)&&(p.n+SV.find(s=>s.id==p.s).n).toLowerCase().includes(q));$('#pl').innerHTML=f.length?`<div class="grid">${f.map(proCard).join('')}</div>`:'<div class="empty">No professionals match. Try changing the filters.</div>'};
+$('#pl').innerHTML='<div class="spin"></div>';setTimeout(run,450);$$('.filters input,.filters select,#fp').forEach(e=>e.oninput=run)}
+function booking(){
+ const q=new URLSearchParams(__q);let s={n:1,svc:q.get('s')||'',prob:'',urg:'',loc:'',img:'',desc:'',pro:q.get('p')||''};if(s.svc)s.n=2;
+ const V=$('#b'),sv=()=>SV.find(x=>x.id==s.svc),est=()=>Math.round(sv().from*({Emergency:1.5,Today:1.2,Flexible:1}[s.urg]||1));
+ const opt=(k,v,l)=>`<button class="opt ${s[k]==v?'sel':''}" data-k="${k}" data-v="${v}">${l}</button>`;
+ const T=['Select service','Select problem','How urgent is it?','Your location','Upload a photo (optional)','Describe the issue','Estimated cost','Matching professionals','Confirm request'];
+ function draw(){let b='',e='';
+  if(s.n==1)b=`<div class="opts">${SV.map(x=>opt('svc',x.id,x.i+' '+x.n)).join('')}</div>`;
+  if(s.n==2)b=`<div class="opts">${sv().p.map(x=>opt('prob',x,x)).join('')}</div>`;
+  if(s.n==3)b=`<div class="opts">${['Emergency','Today','Flexible'].map(x=>opt('urg',x,x)).join('')}</div>`;
+  if(s.n==4)b=`<label>Address / area</label><input id="loc" value="${esc(s.loc)}" placeholder="e.g. Sector 12, Delhi">`;
+  if(s.n==5)b=`<input type="file" id="img" accept="image/*">${s.img?`<img class="prev" src="${s.img}" alt="Preview">`:''}`;
+  if(s.n==6)b=`<textarea id="desc" rows="4" placeholder="Describe what happened…">${esc(s.desc)}</textarea>`;
+  if(s.n==7)b=`<div class="card"><p class="mu">${sv().n} · ${esc(s.prob)} · ${s.urg}</p><h2 style="margin:8px 0">₹${est()}</h2><p class="mu">Demo estimate. Final price confirmed after inspection.</p></div>`;
+  if(s.n==8){const l=PR.filter(p=>p.s==s.svc);b=`<div class="grid">${l.map(p=>`<button class="opt ${s.pro==p.id?'sel':''}" data-k="pro" data-v="${p.id}">${p.n}<br><span class="mu">${stars(p.r)} · ${p.km} km · ₹${p.price}</span></button>`).join('')}</div>`}
+  if(s.n==9){const p=PR[s.pro];b=`<div class="card"><p><b>${sv().n}</b> – ${esc(s.prob)}</p><p class="mu">${s.urg} · ${esc(s.loc)}<br>Professional: ${p.n}<br>Estimate: ₹${est()}</p></div>`}
+  V.innerHTML=`<div class="card"><p class="mu">Step ${s.n} of 9</p><div class="bar"><b style="width:${s.n*100/9}%"></b></div><h2 style="margin-bottom:16px">${T[s.n-1]}</h2>${b}<div id="e" class="err"></div><div class="row" style="margin-top:22px">${s.n>1?'<button class="btn" id="bk">Back</button>':'<a class="btn" href="services.html">Cancel</a>'}<button class="btn pr" id="nx">${s.n==9?'Confirm Request':'Next'}</button></div></div>`;
+  $$('.opt').forEach(o=>o.onclick=()=>{s[o.dataset.k]=o.dataset.v;if(o.dataset.k=='svc')s.prob='';draw()});
+  if($('#img'))$('#img').onchange=ev=>{const f=ev.target.files[0];if(!f)return;if(f.size>3e6)return toast('Image must be under 3 MB','er');const r=new FileReader();r.onload=()=>{s.img=r.result;draw()};r.readAsDataURL(f)};
+  if($('#bk'))$('#bk').onclick=()=>{s.n--;draw()};
+  $('#nx').onclick=()=>{if($('#loc'))s.loc=$('#loc').value.trim();if($('#desc'))s.desc=$('#desc').value.trim();
+   const bad={1:!s.svc,2:!s.prob,3:!s.urg,4:s.loc.length<3,6:s.desc.length<5,8:s.pro===''}[s.n];
+   if(bad){$('#e').textContent={1:'Please choose a service.',2:'Please choose a problem.',3:'Please choose urgency.',4:'Enter your location (min 3 characters).',6:'Add a short description (min 5 characters).',8:'Please choose a professional.'}[s.n];return}
+   if(s.n<9){s.n++;draw()}else done()};
+ }
+ function done(){const r={id:'KS-'+Math.floor(1000+Math.random()*9000),svc:sv().n,prob:s.prob,urg:s.urg,loc:s.loc,desc:s.desc,cost:est(),pro:PR[s.pro].n,photo:!!s.img,status:0,date:new Date().toLocaleString()};const a=LS.get('reqs',[]);a.unshift(r);LS.set('reqs',a);
+  V.innerHTML=`<div class="card ok-box"><div class="big">✅</div><h2>Request Created Successfully</h2><p class="mu">ID ${r.id} · ${r.pro} · ₹${r.cost}</p><div id="t">${trk(0)}</div><div class="row" style="justify-content:center"><button class="btn" id="adv">Simulate next status</button><a class="btn pr" href="dashboard.html">Go to Dashboard</a></div></div>`;toast('Request created','ok');
+  $('#adv').onclick=()=>{const a=LS.get('reqs',[]);if(a[0].status<3)a[0].status++;LS.set('reqs',a);$('#t').innerHTML=trk(a[0].status);toast('Status: '+ST[a[0].status])}}
+ draw()}
+P.booking=()=>head('Book a Service','Complete 9 quick steps to create your request.')+`<div class="c sec" style="max-width:760px"><div id="b"></div></div>`;
+function custDash(){const a=LS.get('reqs',[]),act=a.filter(r=>r.status<3&&!r.x),old=a.filter(r=>r.status==3||r.x);
+ const rc=r=>`<div class="card" style="margin-bottom:12px"><div class="row" style="justify-content:space-between"><b>${r.id} · ${esc(r.svc)}</b><span class="tag pu">${r.x?'Cancelled':ST[r.status]}</span></div><p class="mu">${esc(r.prob)} · ${esc(r.loc)} · ₹${r.cost} · Worker: ${esc(r.pro)}</p>${r.x?'':trk(r.status)}${r.status<3&&!r.x?`<button class="btn sm" data-a="adv" data-i="${r.id}">Simulate next status</button> <button class="btn sm er" data-a="can" data-i="${r.id}">Cancel</button>`:''}</div>`;
+ const sp=LS.get('saved',[0,1]);
+ return `<div class="stats"><div class="card"><b>${act.length}</b>Active</div><div class="card"><b>${old.length}</b>Previous</div><div class="card"><b>${sp.length}</b>Saved pros</div></div><h3>Active Requests</h3><br>${act.map(rc).join('')||'<div class="empty">No active requests. <a href="booking.html" style="color:var(--p)">Book a service</a></div>'}<br><h3>Previous Requests</h3><br>${old.map(rc).join('')||'<div class="empty">Nothing here yet.</div>'}<br><h3>Saved Professionals</h3><br><div class="grid">${sp.map(i=>proCard(PR[i])).join('')}</div>`}
+function workDash(){const w=LS.get('wk',{on:true,earn:0,rate:4.8,jobs:[{id:'J-101',t:'Plumbing – Blocked drain',loc:'Sector 9',pay:450,s:'new'},{id:'J-102',t:'Plumbing – Tap leakage',loc:'Karol Bagh',pay:320,s:'new'},{id:'J-103',t:'Pipe leakage',loc:'Rohini',pay:520,s:'new'}]});window._w=w;
+ const sec=(t,s,btn)=>{const l=w.jobs.filter(j=>j.s==s);return `<h3>${t}</h3><br>${l.map(j=>`<div class="card" style="margin-bottom:10px"><b>${j.t}</b><p class="mu">${j.loc} · ₹${j.pay} · ${j.id}</p>${btn(j)}</div>`).join('')||'<div class="empty">None</div>'}<br>`};
+ return `<div class="stats"><div class="card"><b>₹${w.earn}</b>Earnings</div><div class="card"><b>${stars(w.rate)}</b>Rating</div><div class="card"><button class="btn sm" data-a="tg">${w.on?'🟢 Available':'⚪ Offline'} – toggle</button></div></div>${sec('Incoming Requests','new',j=>`<button class="btn pr sm" data-a="acc" data-i="${j.id}">Accept</button> <button class="btn sm er" data-a="rej" data-i="${j.id}">Reject</button>`)}${sec('Active Jobs','act',j=>`<button class="btn sm" data-a="way" data-i="${j.id}">On The Way</button> <button class="btn pr sm" data-a="fin" data-i="${j.id}">Mark Completed</button>`)}${sec('Completed Jobs','done',j=>'<span class="tag ok">Completed</span>')}`}
+function dash(){const u=user();const V=$('#d');let tab=LS.get('tab','c');
+ const draw=()=>{V.innerHTML=`<div class="tabs"><button data-t="c" class="${tab=='c'?'on':''}">Customer</button><button data-t="w" class="${tab=='w'?'on':''}">Worker</button></div>${tab=='c'?custDash():workDash()}`};draw();
+ V.onclick=e=>{const t=e.target.closest('[data-t]');if(t){tab=t.dataset.t;LS.set('tab',tab);return draw()}
+  const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a,i=b.dataset.i;
+  if(a=='adv'||a=='can'){const r=LS.get('reqs',[]),x=r.find(q=>q.id==i);if(a=='adv'&&x.status<3)x.status++;else if(a=='can'){x.x=1;toast('Request cancelled')}LS.set('reqs',r)}
+  else{const w=window._w,j=w.jobs.find(q=>q.id==i);if(a=='tg'){w.on=!w.on}if(a=='acc')j.s='act';if(a=='rej')w.jobs=w.jobs.filter(q=>q!=j);if(a=='way')toast('Customer notified: on the way','ok');if(a=='fin'){j.s='done';w.earn+=j.pay;toast('Job completed','ok')}LS.set('wk',w)}draw()}}
+P.dashboard=()=>head('Dashboard','Manage requests, jobs and earnings.')+`<div class="c sec"><div id="d"></div></div>`;
+P.workers=()=>`<section class="hero"><div class="c"><div><h1>Grow Your Work With KaamSetu.</h1><p>Receive nearby requests, set your availability and build your reputation.</p><a class="btn pr" href="#reg" onclick="document.getElementById('wf').scrollIntoView({behavior:'smooth'});return false">Register Now</a> <a class="btn" href="dashboard.html">Worker Dashboard</a></div><div class="grid" style="grid-template-columns:1fr">${['Steady local requests','Weekly earnings view','Control your availability'].map(x=>`<div class="card">✔ ${x}</div>`).join('')}</div></div></section>
+<div class="c sec" style="max-width:640px"><form id="wf" class="card" novalidate><h2>Worker Registration</h2><label>Full name</label><input name="n"><label>Phone (10 digits)</label><input name="ph" inputmode="numeric"><label>Service category</label><select name="s">${SV.map(s=>`<option>${s.n}</option>`).join("")}</select><label>Experience (years)</label><input name="x" type="number" min="0" max="50"><label>Location</label><input name="l"><label>Availability</label><select name="a"><option>Full-time</option><option>Part-time</option><option>Weekends</option></select><div id="e" class="err"></div><button class="btn pr" style="margin-top:18px">Create Profile</button></form></div>`;
+function workers(){$('#wf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),er=$('#e');
+ if(f.get('n').trim().length<3)return er.textContent='Enter your full name.';if(!/^\d{10}$/.test(f.get('ph')))return er.textContent='Phone must be 10 digits.';if(f.get('x')===''||+f.get('x')<0)return er.textContent='Enter experience in years.';if(f.get('l').trim().length<3)return er.textContent='Enter your location.';
+ LS.set('wprofile',Object.fromEntries(f));er.textContent='';toast('Worker profile created','ok');setTimeout(()=>go('dashboard.html'),900)}}
+P.login=()=>head('Login / Sign Up','Authentication is simulated in this prototype.')+`<div class="c sec" style="max-width:460px"><div class="card"><div class="tabs"><button class="on" data-m="l">Login</button><button data-m="s">Sign Up</button></div><form id="lf" novalidate><div id="nm" style="display:none"><label>Full name</label><input name="n"></div><label>Email</label><input name="e" type="email"><label>Password (min 6)</label><input name="p" type="password"><div id="e" class="err"></div><button class="btn pr" style="width:100%;margin-top:16px" id="sb">Login</button></form><hr style="margin:18px 0;border:0;border-top:1px solid var(--br)"><div class="row"><button class="btn" id="gg">Continue with Google</button><button class="btn" id="gs">Continue as Guest</button><a class="btn" href="workers.html">Join as Worker</a></div><p class="mu" id="who" style="margin-top:14px"></p></div></div>`;
+function login(){let m='l';const u=user();if(u)$('#who').innerHTML=`Signed in as <b>${esc(u.name)}</b>. <a href="#" id="lo" style="color:var(--p)">Log out</a>`;
+ $$('[data-m]').forEach(b=>b.onclick=()=>{m=b.dataset.m;$$('[data-m]').forEach(x=>x.classList.toggle('on',x==b));$('#nm').style.display=m=='s'?'block':'none';$('#sb').textContent=m=='s'?'Create Account':'Login'});
+ $('#lf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),er=$('#e');if(m=='s'&&f.get('n').trim().length<2)return er.textContent='Enter your name.';if(!/^\S+@\S+\.\S+$/.test(f.get('e')))return er.textContent='Enter a valid email.';if(f.get('p').length<6)return er.textContent='Password must be at least 6 characters.';
+  LS.set('user',{name:m=='s'?f.get('n'):f.get('e').split('@')[0],email:f.get('e')});toast('Welcome to KAAMSETU (simulated login)','ok');setTimeout(()=>go('dashboard.html'),800)};
+ $('#gg').onclick=()=>toast('Google sign-in needs a backend and is not connected in this prototype','er');
+ $('#gs').onclick=()=>{LS.set('user',{name:'Guest'});toast('Continuing as guest','ok');setTimeout(()=>go('index.html'),700)};
+ if($('#lo'))$('#lo').onclick=e=>{e.preventDefault();localStorage.removeItem('ks_user');go('login.html')}}
+
+let __cur='index.html',__q='';
+const F2K={'index.html':'home','services.html':'services','booking.html':'booking','professionals.html':'pros','how-it-works.html':'how','workers.html':'workers','dashboard.html':'dashboard','faq.html':'faq','login.html':'login'};
+const TT={home:'Home',services:'Services',booking:'Book a Service',pros:'Professionals',how:'How It Works',workers:'For Workers',dashboard:'Dashboard',faq:'FAQ & Help',login:'Login / Sign Up'};
+function go(h){const a=h.split('?');__cur=a[0];__q=a[1]?'?'+a[1]:'';render();window.scrollTo(0,0)}
+function render(){$$('header.nav,.ov,.dr,footer').forEach(e=>e.remove());const pg=F2K[__cur]||'home';document.title=TT[pg]+' | KAAMSETU - Problem Se Solution Tak';shell();$('#main').innerHTML=P[pg]();({pros,booking,dashboard:dash,workers,login})[pg]?.();if(['home','faq'].includes(pg))accInit();if(pg=='home')profileModal();document.body.style.overflow=''}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href');if(/\.html/.test(h)){e.preventDefault();go(h)}});
+render();
+</script></body></html>
